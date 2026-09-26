@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "taste",
+      "repository": "https://github.com/Leonxlnx/taste-skill",
+      "commit": "ce26fc25c0e5e8cab638f883de62d9a86ee5e45b",
+      "license": "MIT"
+    },
+    {
+      "id": "emil",
+      "repository": "https://github.com/emilkowalski/skills",
+      "commit": "d16ebe60d09a5ba2afcb7054ede9d0a10c9f6128",
+      "license": "MIT"
+    },
+    {
+      "id": "superpowers",
+      "repository": "https://github.com/obra/superpowers",
+      "commit": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "license": "MIT"
+    },
+    {
+      "id": "remotion",
+      "repository": "https://github.com/remotion-dev/skills",
+      "commit": "cf49eff5d4463b33966b6618c83f7295797dd028",
+      "license": "Not specified in this repository"
+    },
+    {
+      "id": "site-clone",
+      "repository": "https://github.com/cth9191/site-clone",
+      "commit": "f01d396b64afa07870c6fc6757a35b92993791e2",
+      "license": "MIT"
+    },
+    {
+      "id": "playwright",
+      "repository": "https://github.com/microsoft/playwright-cli",
+      "commit": "74354ecc7a43da16d91a9bc54fa8db8283a3fcf5",
+      "license": "Apache-2.0"
+    }
+  ],
+  "skills": [
+    {
+      "directory": "brandkit",
+      "source": "taste",
+      "upstreamPath": "skills/brandkit"
+    },
+    {
+      "directory": "brutalist-skill",
+      "source": "taste",
+      "upstreamPath": "skills/brutalist-skill"
+    },
+    {
+      "directory": "gpt-tasteskill",
+      "source": "taste",
+      "upstreamPath": "skills/gpt-tasteskill"
+    },
+    {
+      "directory": "image-to-code-skill",
+      "source": "taste",
+      "upstreamPath": "skills/image-to-code-skill"
+    },
+    {
+      "directory": "imagegen-frontend-mobile",
+      "source": "taste",
+      "upstreamPath": "skills/imagegen-frontend-mobile"
+    },
+    {
+      "directory": "imagegen-frontend-web",
+      "source": "taste",
+      "upstreamPath": "skills/imagegen-frontend-web"
+    },
+    {
+      "directory": "minimalist-skill",
+      "source": "taste",
+      "upstreamPath": "skills/minimalist-skill"
+    },
+    {
+      "directory": "output-skill",
+      "source": "taste",
+      "upstreamPath": "skills/output-skill"
+    },
+    {
+      "directory": "redesign-skill",
+      "source": "taste",
+      "upstreamPath": "skills/redesign-skill"
+    },
+    {
+      "directory": "soft-skill",
+      "source": "taste",
+      "upstreamPath": "skills/soft-skill"
+    },
+    {
+      "directory": "stitch-skill",
+      "source": "taste",
+      "upstreamPath": "skills/stitch-skill"
+    },
+    {
+      "directory": "taste-skill",
+      "source": "taste",
+      "upstreamPath": "skills/taste-skill"
+    },
+    {
+      "directory": "taste-skill-v1",
+      "source": "taste",
+      "upstreamPath": "skills/taste-skill-v1"
+    },
+    {
+      "directory": "animate",
+      "source": "emil",
+      "upstreamPath": "skills/animate"
+    },
+    {
+      "directory": "animate-expo",
+      "source": "emil",
+      "upstreamPath": "skills/animate-expo"
+    },
+    {
+      "directory": "animation-vocabulary",
+      "source": "emil",
+      "upstreamPath": "skills/animation-vocabulary"
+    },
+    {
+      "directory": "apple-design",
+      "source": "emil",
+      "upstreamPath": "skills/apple-design"
+    },
+    {
+      "directory": "ask-sonner",
+      "source": "emil",
+      "upstreamPath": "skills/ask-sonner"
+    },
+    {
+      "directory": "emil-design-eng",
+      "source": "emil",
+      "upstreamPath": "skills/emil-design-eng"
+    },
+    {
+      "directory": "find-animation-opportunities",
+      "source": "emil",
+      "upstreamPath": "skills/find-animation-opportunities"
+    },
+    {
+      "directory": "improve-animations",
+      "source": "emil",
+      "upstreamPath": "skills/improve-animations"
+    },
+    {
+      "directory": "mobile-native",
+      "source": "emil",
+      "upstreamPath": "skills/mobile-native"
+    },
+    {
+      "directory": "pick-ui-library",
+      "source": "emil",
+      "upstreamPath": "skills/pick-ui-library"
+    },
+    {
+      "directory": "prototype",
+      "source": "emil",
+      "upstreamPath": "skills/prototype"
+    },
+    {
+      "directory": "review-animations",
+      "source": "emil",
+      "upstreamPath": "skills/review-animations"
+    },
+    {
+      "directory": "write-swift",
+      "source": "emil",
+      "upstreamPath": "skills/write-swift"
+    },
+    {
+      "directory": "brainstorming",
+      "source": "superpowers",
+      "upstreamPath": "skills/brainstorming"
+    },
+    {
+      "directory": "diagnosing-superpowers",
+      "source": "superpowers",
+      "upstreamPath": "skills/diagnosing-superpowers"
+    },
+    {
+      "directory": "dispatching-parallel-agents",
+      "source": "superpowers",
+      "upstreamPath": "skills/dispatching-parallel-agents"
+    },
+    {
+      "directory": "executing-plans",
+      "source": "superpowers",
+      "upstreamPath": "skills/executing-plans"
+    },
+    {
+      "directory": "finishing-a-development-branch",
+      "source": "superpowers",
+      "upstreamPath": "skills/finishing-a-development-branch"
+    },
+    {
+      "directory": "receiving-code-review",
+      "source": "superpowers",
+      "upstreamPath": "skills/receiving-code-review"
+    },
+    {
+      "directory": "requesting-code-review",
+      "source": "superpowers",
+      "upstreamPath": "skills/requesting-code-review"
+    },
+    {
+      "directory": "subagent-driven-development",
+      "source": "superpowers",
+      "upstreamPath": "skills/subagent-driven-development"
+    },
+    {
+      "directory": "systematic-debugging",
+      "source": "superpowers",
+      "upstreamPath": "skills/systematic-debugging"
+    },
+    {
+      "directory": "test-driven-development",
+      "source": "superpowers",
+      "upstreamPath": "skills/test-driven-development"
+    },
+    {
+      "directory": "using-git-worktrees",
+      "source": "superpowers",
+      "upstreamPath": "skills/using-git-worktrees"
+    },
+    {
+      "directory": "using-superpowers",
+      "source": "superpowers",
+      "upstreamPath": "skills/using-superpowers"
+    },
+    {
+      "directory": "verification-before-completion",
+      "source": "superpowers",
+      "upstreamPath": "skills/verification-before-completion"
+    },
+    {
+      "directory": "writing-plans",
+      "source": "superpowers",
+      "upstreamPath": "skills/writing-plans"
+    },
+    {
+      "directory": "writing-skills",
+      "source": "superpowers",
+      "upstreamPath": "skills/writing-skills"
+    },
+    {
+      "directory": "remotion-best-practices",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-best-practices"
+    },
+    {
+      "directory": "remotion-captions",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-captions"
+    },
+    {
+      "directory": "remotion-create",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-create"
+    },
+    {
+      "directory": "remotion-docs",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-docs"
+    },
+    {
+      "directory": "remotion-interactivity",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-interactivity"
+    },
+    {
+      "directory": "remotion-maps",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-maps"
+    },
+    {
+      "directory": "remotion-markup",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-markup"
+    },
+    {
+      "directory": "remotion-multimedia",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-multimedia"
+    },
+    {
+      "directory": "remotion-render",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-render"
+    },
+    {
+      "directory": "remotion-saas",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-saas"
+    },
+    {
+      "directory": "remotion-studio",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-studio"
+    },
+    {
+      "directory": "remotion-upgrade",
+      "source": "remotion",
+      "upstreamPath": "skills/remotion-upgrade"
+    },
+    {
+      "directory": "clone-site",
+      "source": "site-clone",
+      "upstreamPath": "skills/clone-site"
+    },
+    {
+      "directory": "dom-clone",
+      "source": "site-clone",
+      "upstreamPath": "skills/dom-clone"
+    },
+    {
+      "directory": "remix-site",
+      "source": "site-clone",
+      "upstreamPath": "skills/remix-site"
+    },
+    {
+      "directory": "shader-extract",
+      "source": "site-clone",
+      "upstreamPath": "skills/shader-extract"
+    },
+    {
+      "directory": "playwright-cli",
+      "source": "playwright",
+      "upstreamPath": "skills/playwright-cli"
+    }
+  ]
+}

@@ -1,36 +1,70 @@
 # Codex Skills
 
-Colectie personala de skill-uri Codex, pastrata intr-un repository privat pentru utilizare pe mai multe calculatoare.
+Colectia privata a lui Robert: **58 de skill-uri din 6 surse**, disponibile global in Codex CLI pe Windows. Fisierele si resursele sunt incluse in repository; nu trebuie reinstalat fiecare skill separat.
 
-## Stare
+| Colectie | Numar | Utilizare |
+|---|---:|---|
+| Taste Skill | 13 | Design frontend, redesign, stiluri vizuale |
+| Emil Kowalski | 13 | Interfete, animatii, design engineering |
+| Playwright CLI | 1 | Automatizare si verificare in browser |
+| Superpowers | 15 | Planificare, debugging, teste, review |
+| Remotion | 12 | Video cu React si fluxuri Remotion |
+| Site Clone | 4 | Analiza, reconstructie si personalizare site-uri |
 
-Repository initializat. Skill-urile vor fi adaugate dupa ce sunt furnizate de proprietar. Nu sunt inca instalate skill-uri si nu este configurata sincronizarea automata.
+[Catalog complet, surse, licente si versiuni](SOURCES.md)
 
-## Organizare
+## Instalare pe un calculator nou
 
-Fiecare skill va avea propriul director:
+Ai nevoie de Git si de acces la acest repository privat. Codex CLI se instaleaza separat. Ruleaza in **CMD**, dintr-un folder unde doresti sa pastrezi colectia:
 
-```text
-skills/
-  nume-skill/
-    SKILL.md
-    scripts/       # optional
-    references/    # optional
-    assets/        # optional
+```bat
+git clone https://github.com/robertalc1/codex-skills.git
+cd codex-skills
+setup.cmd
+install-tools.cmd
+codex.cmd
 ```
 
-## Utilizare pe calculatoare
+In PowerShell, foloseste `./setup.cmd` si `./install-tools.cmd`. Autentifica-te in GitHub daca Git iti cere. Nu introduce tokenuri in comanda sau in repository.
 
-1. Autentificare GitHub si clonarea acestui repository pe fiecare calculator, o singura data.
-2. Configurarea skill-urilor pentru descoperire globala de Codex din directorul utilizatorului `.agents/skills`. Pasul de configurare va fi adaugat odata cu primele skill-uri.
-3. Actualizarea copiei locale folosind `git pull --ff-only` din directorul repository-ului.
-4. Verificarea skill-urilor in Codex cu `/skills`; repornirea sesiunii daca schimbarile nu apar.
+`setup.cmd` creeaza legaturi de tip junction in `%USERPROFILE%\.agents\skills`, cate una pentru fiecare skill. Nu necesita administrator. Verifica intai toate destinatiile si se opreste la conflicte; nu suprascrie skill-uri existente. Poate fi rulat de mai multe ori. **Pastreaza checkout-ul in acelasi loc**: legaturile trimit catre el.
 
-Codex foloseste fisierele locale. Autentificarea in acelasi cont ChatGPT nu cloneaza automat acest repository. Programele si conexiunile cerute de un skill se configureaza separat pe fiecare calculator.
+Launcherul `.cmd` permite executarea scriptului PowerShell numai in procesul de instalare; nu schimba permanent Execution Policy. `install-tools.cmd` instaleaza separat versiunea fixata `@playwright/cli@0.1.21` si necesita Node.js LTS si acces la npm. Browserul si celelalte dependinte specifice proiectului se configureaza la utilizare.
 
-## Reguli pentru adaugare
+## Folosire
 
-- Pastram instructiunile, resursele si scripturile necesare fiecarui skill.
-- Pastram informatiile despre sursa si licenta skill-urilor externe.
-- Nu includem parole, tokenuri, fisiere de autentificare sau date personale de lucru.
-- Configurarea viitoare trebuie sa pastreze skill-urile locale deja existente si sa semnaleze conflictele de nume.
+In Codex ruleaza `/skills` sau mentioneaza skill-ul cu `$`. Exemplu:
+
+```text
+$emil-design-eng Imbunatateste animatiile acestei interfete.
+$playwright-cli Verifica formularul din aplicatia mea locala.
+$remotion-best-practices Creeaza un videoclip pentru produsul meu.
+$clone-site Analizeaza site-ul indicat si pregateste o reconstructie.
+```
+
+Numele invocabil vine din campul `name` din SKILL.md; poate diferi de numele folderului. Porneste o sesiune noua daca skill-urile nu apar. Global inseamna disponibil in toate proiectele, nu activat la fiecare mesaj. Cu multe skill-uri instalate, Codex poate prescurta lista initiala; foloseste `/skills` si mentionarea explicita pentru selectie.
+
+## Actualizare pe alt calculator
+
+Dupa ce modificarile au ajuns in acest repository, ruleaza din checkout:
+
+```bat
+update.cmd
+```
+
+Actualizeaza prin `git pull --ff-only`, apoi adauga legaturi pentru skill-urile noi. Skill-urile existente citesc imediat fisierele actualizate. Scriptul nu sterge legaturi vechi si nu suprascrie conflicte. Nu exista un serviciu de sincronizare automata sau actualizare automata la fiecare pornire.
+
+## Ce este inclus
+
+- Directoarele complete de skill-uri, cu scripturi si referinte auxiliare; instructiunile upstream nu sunt rescrise.
+- Ambele versiuni Taste disponibile upstream, inclusiv v1 si v2 experimental: alege una potrivita, nu le invoca impreuna.
+- Toate cele patru skill-uri Site Clone, necesare pentru referintele dintre ele.
+- Superpowers ca set de skill-uri; hook-urile si integrarea completa de plugin nu sunt instalate. Unele fluxuri depind de suportul multi-agent al sesiunii.
+- Nu sunt activate automat servicii MCP, conturi, telemetrie sau scripturi ale skill-urilor la instalare. Skill-urile pot solicita aceste instrumente cand sunt folosite.
+- Remotion nu include o licenta explicita in snapshot-ul acestui repository upstream; pastram nota din `sources/remotion/LICENSE-NOTE.md`, fara a atribui o licenta inventata. Colectia este privata.
+
+## Versiuni si intretinere
+
+`sources.lock.json` fixeaza commit-urile upstream. `update.cmd` preia schimbarile din **acest repository**, nu cele mai noi versiuni de la autori. Actualizarea upstream se face separat, cu verificarea fisierelor, licentelor si catalogului. Nu adauga credentiale sau date de lucru.
+
+Fisierele copiate raman sub termenii autorilor lor; licentele si README-urile originale sunt pastrate in `sources/`.
