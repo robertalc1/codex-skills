@@ -1,6 +1,6 @@
 # Codex Skills
 
-Colectia privata a lui Robert: **58 de skill-uri din 6 surse**, disponibile global in Codex CLI pe Windows. Fisierele si resursele sunt incluse in repository; nu trebuie reinstalat fiecare skill separat.
+Colectia privata a lui Robert: **59 de skill-uri din 7 surse**, disponibile global in Codex CLI pe Windows. Fisierele si resursele sunt incluse in repository; nu trebuie reinstalat fiecare skill separat.
 
 | Colectie | Numar | Utilizare |
 |---|---:|---|
@@ -10,6 +10,7 @@ Colectia privata a lui Robert: **58 de skill-uri din 6 surse**, disponibile glob
 | Superpowers | 15 | Planificare, debugging, teste, review |
 | Remotion | 12 | Video cu React si fluxuri Remotion |
 | Site Clone | 4 | Analiza, reconstructie si personalizare site-uri |
+| Karpathy Guidelines | 1 | Clarificarea ipotezelor, cod simplu, modificari precise, verificare |
 
 [Catalog complet, surse, licente si versiuni](SOURCES.md)
 
@@ -36,6 +37,7 @@ Launcherul `.cmd` permite executarea scriptului PowerShell numai in procesul de 
 In Codex ruleaza `/skills` sau mentioneaza skill-ul cu `$`. Exemplu:
 
 ```text
+$karpathy-guidelines Revizuieste codul si pastreaza modificarile simple si precise.
 $emil-design-eng Imbunatateste animatiile acestei interfete.
 $playwright-cli Verifica formularul din aplicatia mea locala.
 $remotion-best-practices Creeaza un videoclip pentru produsul meu.

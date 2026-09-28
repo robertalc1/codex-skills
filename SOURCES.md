@@ -11,6 +11,8 @@ Copii integrale ale directoarelor de skill-uri, fara executarea scripturilor ups
 | [site-clone](https://github.com/cth9191/site-clone) | 4 | MIT | [f01d396b64af](https://github.com/cth9191/site-clone/commit/f01d396b64afa07870c6fc6757a35b92993791e2) |
 | [playwright](https://github.com/microsoft/playwright-cli) | 1 | Apache-2.0 | [74354ecc7a43](https://github.com/microsoft/playwright-cli/commit/74354ecc7a43da16d91a9bc54fa8db8283a3fcf5) |
 
+| [karpathy](https://github.com/multica-ai/andrej-karpathy-skills) | 1 | MIT (declarata in SKILL.md si README) | [2c606141936f](https://github.com/multica-ai/andrej-karpathy-skills/commit/2c606141936f1eeef17fa3043a72095b4765b9c2) |
+
 Licentele si README-urile originale sunt in `sources/`. Licentele upstream guverneaza fisierele copiate; colectia nu le relicentiaza.
 
 ## Catalog
@@ -73,3 +75,4 @@ Licentele si README-urile originale sunt in `sources/`. Licentele upstream guver
 - [remix-site](skills/remix-site/SKILL.md) (site-clone)
 - [shader-extract](skills/shader-extract/SKILL.md) (site-clone)
 - [playwright-cli](skills/playwright-cli/SKILL.md) (playwright)
+- [karpathy-guidelines](skills/karpathy-guidelines/SKILL.md) (karpathy)

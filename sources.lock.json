@@ -36,6 +36,12 @@
       "repository": "https://github.com/microsoft/playwright-cli",
       "commit": "74354ecc7a43da16d91a9bc54fa8db8283a3fcf5",
       "license": "Apache-2.0"
+    },
+    {
+      "id": "karpathy",
+      "repository": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "commit": "2c606141936f1eeef17fa3043a72095b4765b9c2",
+      "license": "MIT (declared in SKILL.md and upstream README)"
     }
   ],
   "skills": [
@@ -328,6 +334,11 @@
       "directory": "playwright-cli",
       "source": "playwright",
       "upstreamPath": "skills/playwright-cli"
+    },
+    {
+      "directory": "karpathy-guidelines",
+      "source": "karpathy",
+      "upstreamPath": "skills/karpathy-guidelines"
     }
   ]
 }
