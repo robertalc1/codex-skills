@@ -1,0 +1,4 @@
+interface:
+  display_name: "BSGIS UI Design"
+  short_description: "Exact BSGIS layouts, controls and top-lit buttons"
+  default_prompt: "Use $bsgis-ui-design to apply the BSGIS layout, typography, spacing and top-light button hover to this project while preserving its functionality."

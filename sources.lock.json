@@ -42,6 +42,13 @@
       "repository": "https://github.com/multica-ai/andrej-karpathy-skills",
       "commit": "2c606141936f1eeef17fa3043a72095b4765b9c2",
       "license": "MIT (declared in SKILL.md and upstream README)"
+    },
+    {
+      "id": "bsgis-design",
+      "repository": "https://github.com/robertalc1/codex-skills",
+      "kind": "first-party",
+      "path": "skills/bsgis-ui-design",
+      "license": "No separate license declared"
     }
   ],
   "skills": [
@@ -339,6 +346,11 @@
       "directory": "karpathy-guidelines",
       "source": "karpathy",
       "upstreamPath": "skills/karpathy-guidelines"
+    },
+    {
+      "directory": "bsgis-ui-design",
+      "source": "bsgis-design",
+      "upstreamPath": "skills/bsgis-ui-design"
     }
   ]
 }

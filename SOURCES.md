@@ -15,6 +15,10 @@ Copii integrale ale directoarelor de skill-uri, fara executarea scripturilor ups
 
 Licentele si README-urile originale sunt in `sources/`. Licentele upstream guverneaza fisierele copiate; colectia nu le relicentiaza.
 
+## Sursa proprie: BSGIS UI Design
+
+`bsgis-design` este skill-ul propriu din [skills/bsgis-ui-design](skills/bsgis-ui-design/SKILL.md), creat din designul BSGIS final. Este versionat direct in acest repository, fara commit upstream separat. Include reguli, CSS izolat si exemple sintetice offline. Nu include cod Cloudflare extras, backend, credentiale sau date cadastrale. Nu se declara o licenta separata prin aceasta adaugare.
+
 ## Catalog
 
 - [brandkit](skills/brandkit/SKILL.md) (taste)
@@ -76,3 +80,4 @@ Licentele si README-urile originale sunt in `sources/`. Licentele upstream guver
 - [shader-extract](skills/shader-extract/SKILL.md) (site-clone)
 - [playwright-cli](skills/playwright-cli/SKILL.md) (playwright)
 - [karpathy-guidelines](skills/karpathy-guidelines/SKILL.md) (karpathy)
+- [bsgis-ui-design](skills/bsgis-ui-design/SKILL.md) (bsgis-design, sursa proprie)

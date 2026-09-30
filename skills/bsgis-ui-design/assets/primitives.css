@@ -1,0 +1,327 @@
+/* Scoped BSGIS design reference. No application behavior is included. */
+.bsg-ui {
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.bsg-ui h1,
+.bsg-ui h2,
+.bsg-ui h3,
+.bsg-ui h4 {
+  font-weight: var(--fw-regular);
+  color: var(--text);
+  letter-spacing: var(--ls-heading);
+  line-height: var(--lh-heading);
+  text-wrap: balance;
+  margin: 0;
+}
+
+.bsg-ui p {
+  margin: 0;
+}
+.bsg-ui ::selection {
+  background: var(--blue-tint);
+  color: var(--text);
+}
+
+.bsg-ui a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.bsg-ui a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.bsg-ui * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.bsg-ui ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.bsg-ui ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bsg-ui ::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border: 3px solid transparent;
+  background-clip: content-box;
+  border-radius: var(--r-pill);
+}
+
+.bsg-ui ::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+  background-clip: content-box;
+}
+.bsg-ui table,
+.bsg-ui .num,
+.bsg-ui .tabular {
+  font-variant-numeric: tabular-nums;
+}
+.bsg-ui :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: var(--r-xs);
+}
+.bsg-ui .btn {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-height: var(--ctl-h);
+  padding: 0 var(--ctl-px);
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  background: none;
+  color: inherit;
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-button);
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.bsg-ui .btn:hover {
+  text-decoration: none;
+}
+
+.bsg-ui .btn:disabled,
+.bsg-ui .btn[disabled],
+.bsg-ui .btn[aria-disabled='true'] {
+  background: var(--surface-sunken);
+  color: var(--text-faint);
+  border-color: transparent;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.bsg-ui .btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.bsg-ui .btn-md {
+  min-height: var(--ctl-h-md);
+  padding: 0 var(--ctl-px-sm);
+  font-size: var(--fs-sm);
+}
+
+.bsg-ui .btn-sm {
+  min-height: var(--ctl-h-sm);
+  padding: 0 var(--sp-3);
+  font-size: var(--fs-sm);
+  gap: var(--sp-1);
+}
+
+.bsg-ui .btn-sm svg {
+  width: 16px;
+  height: 16px;
+}
+
+.bsg-ui .btn-icon {
+  width: var(--ctl-h-md);
+  min-height: var(--ctl-h-md);
+  padding: 0;
+  gap: 0;
+  border-radius: var(--r-sm);
+}
+
+.bsg-ui .btn-icon.btn-sm {
+  width: var(--ctl-h-sm);
+  min-height: var(--ctl-h-sm);
+}
+
+.bsg-ui .btn-block {
+  width: 100%;
+}
+.bsg-ui .btn-primary {
+  border-color: var(--blue-hover);
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--blue), white 13%), var(--blue));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(32 33 36 / 6%);
+  color: var(--text-on-accent);
+}
+
+.bsg-ui .btn-primary:active:not(:disabled):not([disabled]):not([aria-disabled='true']) {
+  background: var(--blue-press);
+}
+.bsg-ui .btn-outline,
+.bsg-ui .btn-secondary,
+.bsg-ui .btn-on-bind {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 1px 2px rgb(32 33 36 / 4%);
+  border-color: var(--line);
+}
+
+.bsg-ui .btn-outline:hover:not(:disabled):not([disabled]):not([aria-disabled='true']),
+.bsg-ui .btn-secondary:hover:not(:disabled):not([disabled]):not([aria-disabled='true']),
+.bsg-ui .btn-on-bind:hover:not(:disabled):not([disabled]):not([aria-disabled='true']) {
+  background: var(--surface-alt);
+  border-color: var(--text-faint);
+}
+
+.bsg-ui .btn-text {
+  background: transparent;
+  color: var(--blue);
+  padding: 0 var(--sp-3);
+}
+
+.bsg-ui .btn-text:hover:not(:disabled):not([disabled]):not([aria-disabled='true']) {
+  background: var(--blue-tint);
+}
+
+.bsg-ui .btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.bsg-ui .btn-ghost:hover:not(:disabled):not([disabled]):not([aria-disabled='true']) {
+  background: var(--surface-sunken);
+  color: var(--text);
+}
+
+.bsg-ui .btn-danger {
+  background: transparent;
+  color: var(--red);
+  border-color: var(--line);
+}
+
+.bsg-ui .btn-danger:hover:not(:disabled):not([disabled]):not([aria-disabled='true']) {
+  background: var(--red-tint);
+  border-color: var(--red-tint);
+}
+
+.bsg-ui .btn-danger-solid {
+  background: var(--red);
+  color: var(--text-on-accent);
+}
+
+.bsg-ui .btn-danger-solid:hover:not(:disabled):not([disabled]):not([aria-disabled='true']) {
+  background: var(--red-hover);
+  box-shadow: var(--elev-1);
+}
+.bsg-ui .btn:is(.btn-primary, .btn-outline, .btn-secondary, .btn-on-bind, .btn-danger-solid)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgb(255 255 255 / 32%), rgb(255 255 255 / 8%) 42%, transparent 72%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 65%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur) ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bsg-ui .btn:not(:disabled):not([disabled]):not([aria-disabled='true']):not([aria-disabled='true']):hover::before { opacity: 1; }
+  .bsg-ui .btn:not(:disabled):not([disabled]):not([aria-disabled='true']):not([aria-disabled='true']):active::before { opacity: 0.3; }
+}
+.bsg-ui input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']):not([type='file']),
+.bsg-ui select,
+.bsg-ui textarea {
+  min-height: var(--ctl-h-md);
+  padding: 0 var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xs);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.bsg-ui textarea {
+  padding: var(--sp-3) var(--sp-4);
+  line-height: var(--lh-body);
+  resize: vertical;
+}
+
+.bsg-ui select {
+  cursor: pointer;
+}
+
+.bsg-ui ::placeholder {
+  color: var(--text-faint);
+  opacity: 1;
+}
+
+.bsg-ui input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']):not([type='file']):hover,
+.bsg-ui select:hover,
+.bsg-ui textarea:hover {
+  border-color: var(--text-muted);
+}
+
+.bsg-ui input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']):not([type='file']):focus,
+.bsg-ui select:focus,
+.bsg-ui textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: inset 0 0 0 1px var(--blue);
+}
+
+.bsg-ui input:disabled,
+.bsg-ui select:disabled,
+.bsg-ui textarea:disabled {
+  background: var(--surface-sunken);
+  color: var(--text-faint);
+  cursor: not-allowed;
+}
+
+.bsg-ui input[aria-invalid='true'],
+.bsg-ui select[aria-invalid='true'],
+.bsg-ui textarea[aria-invalid='true'] {
+  border-color: var(--red);
+}
+
+.bsg-ui input[type='checkbox'],
+.bsg-ui input[type='radio'] {
+  accent-color: var(--blue);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.bsg-ui input[type='range'] {
+  accent-color: var(--blue);
+}
+@media (prefers-reduced-motion: reduce) {
+  .bsg-ui *,
+  .bsg-ui *::before,
+  .bsg-ui *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.bsg-ui { margin:0; }
+.bsg-ui, .bsg-ui *, .bsg-ui *::before, .bsg-ui *::after { box-sizing:border-box; }
+.bsg-ui .brand { display:inline-flex; align-items:center; gap:12px; color:var(--text); text-decoration:none; }
+.bsg-ui .brand svg { color:var(--blue); flex-shrink:0; }
+.bsg-ui .brand-name { white-space:nowrap; }
+.bsg-ui .lang-switch { font:inherit; font-size:14px; min-height:38px; border:1px solid transparent; border-radius:8px; padding:0 8px; }
+.bsg-ui .demo-note { font-size:12px; line-height:18px; color:var(--text-muted); }
+.bsg-ui [hidden] { display:none !important; }

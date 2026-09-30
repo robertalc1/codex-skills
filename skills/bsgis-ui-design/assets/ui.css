@@ -1,0 +1,239 @@
+/* Scoped BSGIS design reference. No application behavior is included. */
+.bsg-ui .wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .bsg-ui .wrap {
+    padding-inline: var(--sp-4);
+  }
+}
+.bsg-ui .section {
+  padding-block: var(--sp-12);
+}
+
+.bsg-ui .section--tight {
+  padding-block: var(--sp-9);
+}
+
+.bsg-ui .section--alt {
+  background: var(--surface-alt);
+}
+
+@media (max-width: 768px) {
+  .bsg-ui .section {
+    padding-block: var(--sp-9);
+  }
+
+  .bsg-ui .section--tight {
+    padding-block: var(--sp-7);
+  }
+}
+.bsg-ui .eyebrow {
+  display: block;
+  margin-bottom: var(--sp-3);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-medium);
+  line-height: 16px;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-heading);
+}
+
+.bsg-ui .section-head {
+  max-width: 44ch;
+  margin-bottom: var(--sp-8);
+}
+
+.bsg-ui .section-head--center {
+  max-width: 62ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.bsg-ui .section-head--center h2 {
+  max-width: 24ch;
+  margin-inline: auto;
+}
+
+.bsg-ui .section-head h2 {
+  font-size: var(--fs-h1);
+  letter-spacing: var(--ls-display);
+  line-height: 1.15;
+}
+
+.bsg-ui .section-head p {
+  margin-top: var(--sp-4);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-body);
+  color: var(--text-muted);
+}
+.bsg-ui .card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-6);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  transition: box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.bsg-ui .card--hover:hover {
+  box-shadow: var(--elev-1);
+  border-color: transparent;
+}
+
+.bsg-ui .card h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: var(--sp-3);
+}
+
+.bsg-ui .card p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-muted);
+}
+
+.bsg-ui .grid {
+  display: grid;
+  gap: var(--sp-5);
+}
+
+.bsg-ui .grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.bsg-ui .grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+.bsg-ui .tabs {
+  display: flex;
+  gap: var(--sp-6);
+  border-bottom: 1px solid var(--line-soft);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.bsg-ui .tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.bsg-ui .tab {
+  appearance: none;
+  flex-shrink: 0;
+  padding: var(--sp-4) 0;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-button);
+  cursor: pointer;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.bsg-ui .tab:hover {
+  color: var(--text);
+}
+
+.bsg-ui .tab[aria-selected='true'] {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+.bsg-ui .tab-count {
+  margin-left: var(--sp-2);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-faint);
+  font-weight: var(--fw-regular);
+}
+
+.bsg-ui .tab[aria-selected='true'] .tab-count {
+  color: var(--blue);
+}
+.bsg-ui .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--r-pill);
+  background: var(--surface-sunken);
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+}
+
+.bsg-ui .chip--ok {
+  background: var(--green-tint);
+  color: var(--green-text);
+}
+
+.bsg-ui .chip--warn {
+  background: var(--yellow-tint);
+  color: var(--yellow-text);
+}
+
+.bsg-ui .chip--danger {
+  background: var(--red-tint);
+  color: var(--red-text);
+}
+
+.bsg-ui .chip--info {
+  background: var(--blue-tint);
+  color: var(--blue-text);
+}
+
+.bsg-ui .chip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.bsg-ui .empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  padding: var(--sp-8) var(--sp-6);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-card);
+  background: var(--surface-alt);
+}
+
+.bsg-ui .empty-state-title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  color: var(--text);
+}
+
+.bsg-ui .empty-state p {
+  margin: 0;
+  max-width: 48ch;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--text-muted);
+}
+.bsg-ui .skeleton {
+  border-radius: var(--r-xs);
+  background: linear-gradient(
+    90deg,
+    var(--surface-sunken) 0%,
+    var(--line-soft) 40%,
+    var(--surface-sunken) 80%
+  );
+  background-size: 300% 100%;
+  animation: bsgis-skeleton 1.4s var(--ease) infinite;
+}
+
+@keyframes bsgis-skeleton {
+  from { background-position: 120% 0; }
+  to { background-position: -40% 0; }
+}

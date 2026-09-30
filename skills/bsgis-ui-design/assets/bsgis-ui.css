@@ -1,0 +1,16 @@
+@import './tokens.css';
+@import './primitives.css';
+@import './ui.css';
+@import './admin.css';
+@import './auth.css';
+@import './layout.css';
+
+/* Last, including after the skeleton definition in ui.css. */
+@media (prefers-reduced-motion: reduce) {
+  .bsg-ui *, .bsg-ui *::before, .bsg-ui *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

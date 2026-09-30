@@ -1,0 +1,150 @@
+/* Scoped BSGIS design reference. No application behavior is included. */
+.bsg-ui .auth-page {
+  min-height: 100svh;
+  background: var(--surface);
+}
+
+.bsg-ui .auth-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 96px;
+  padding: 0 clamp(24px, 2.5vw, 48px);
+}
+
+.bsg-ui .auth-header .brand-name { font-size: 14px; font-weight: 600; }
+.bsg-ui .auth-header-actions { display: flex; align-items: center; gap: 20px; }
+.bsg-ui .auth-header .lang-switch { background-color: transparent; color: white; border-color: transparent; }
+.bsg-ui .auth-header .lang-switch option { color: var(--text); background: var(--surface); }
+.bsg-ui .auth-header .btn-outline { background: var(--surface); }
+
+.bsg-ui .auth-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 100svh;
+  padding: 0;
+  background: var(--surface);
+  align-items: stretch;
+}
+
+.bsg-ui .auth-entry {
+  display: grid;
+  grid-template-rows: minmax(min-content, 1fr) auto;
+  justify-items: center;
+  min-width: 0;
+  padding: 112px 40px 32px;
+}
+
+.bsg-ui .auth-card {
+  width: 100%;
+  max-width: 400px;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.bsg-ui .auth-card h1 {
+  margin: 0 0 32px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.bsg-ui .auth-form { gap: 20px; }
+.bsg-ui .auth-form label { gap: 8px; color: var(--text); font-size: 14px; line-height: 20px; }
+.bsg-ui .auth-form input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']):not([type='file']) { width: 100%; min-width: 0; height: 44px; min-height: 44px; font-size: 14px; border-radius: 8px; }
+.bsg-ui .auth-form > .btn { min-height: 44px; margin-top: 4px; }
+.bsg-ui .auth-form .turnstile-widget { display: flex; justify-content: center; }
+.bsg-ui .auth-password-field { display: flex; flex-direction: column; gap: 8px; }
+.bsg-ui .auth-password-control { position: relative; }
+.bsg-ui .auth-password-control input { padding-right: 48px; }
+.bsg-ui .auth-password-toggle {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  display: grid;
+  place-items: center;
+  width: 45px;
+  border: 0;
+  border-left: 1px solid var(--line-soft);
+  border-radius: 0 7px 7px 0;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+.bsg-ui .auth-password-toggle:hover { background: var(--surface-alt); }
+.bsg-ui .auth-switch { margin-top: 28px; padding: 0; border: 0; line-height: 24px; }
+.bsg-ui .auth-switch a { display: inline-block; }
+.bsg-ui .auth-footer { max-width: 400px; margin: 0; padding-top: 48px; text-align: center; font-size: 12px; line-height: 18px; color: var(--text-muted); }
+
+.bsg-ui .auth-feature {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+  justify-content: center;
+  padding: 112px clamp(40px, 4vw, 80px) 96px;
+  background: linear-gradient(100deg, var(--blue-press), var(--blue) 65%);
+  color: var(--text-on-accent);
+}
+
+.bsg-ui .auth-feature-pattern {
+  position: absolute;
+  inset: 8% -18% 8% 8%;
+  border-radius: 50%;
+  background: repeating-linear-gradient(132deg, transparent 0 6px, rgb(255 255 255 / 24%) 6px 7px);
+  mask-image: linear-gradient(100deg, transparent 0%, #000 65%);
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.bsg-ui .auth-feature-content { position: relative; z-index: 1; width: 100%; max-width: 440px; }
+.bsg-ui .auth-feature-label { margin-bottom: 16px; font: 13px/20px ui-monospace, monospace; letter-spacing: 0.5px; }
+.bsg-ui .auth-feature h2 { max-width: 420px; color: inherit; font-size: clamp(32px, 2.5vw, 40px); line-height: 1.15; font-weight: 600; letter-spacing: -0.8px; text-wrap: balance; }
+.bsg-ui .auth-feature-description { max-width: 390px; margin: 24px 0; font-size: 15px; line-height: 24px; text-wrap: pretty; }
+.bsg-ui .auth-feature .btn { background: var(--surface); color: var(--text); }
+
+@media (max-width: 900px) {
+  .bsg-ui .auth-feature { padding-inline: 32px; }
+  .bsg-ui .auth-entry { padding-inline: 28px; }
+  .bsg-ui .auth-header-actions { gap: 8px; }
+}
+
+@media (max-width: 800px) {
+  .bsg-ui .auth-header { position: relative; height: 76px; padding-inline: 20px; }
+  .bsg-ui .auth-header .brand-name, .bsg-ui .auth-header-actions > .btn { display: none; }
+  .bsg-ui .auth-header .lang-switch { color: var(--text); }
+  .bsg-ui .auth-main { display: block; min-height: calc(100svh - 76px); }
+  .bsg-ui .auth-entry { min-height: calc(100svh - 76px); padding: 40px 24px 24px; }
+  .bsg-ui .auth-feature { display: none; }
+  .bsg-ui .auth-card h1 { font-size: 23px; }
+}
+
+@media (max-height: 650px) {
+  .bsg-ui .auth-entry { padding-top: 104px; }
+  .bsg-ui .auth-footer { padding-top: 32px; }
+}
+
+@media (max-width: 800px) and (max-height: 650px) {
+  .bsg-ui .auth-entry { padding-top: 24px; }
+}
+
+.bsg-ui .auth-page { position:relative; }
+.bsg-ui .auth-form { display:flex; flex-direction:column; }
+.bsg-ui .auth-form label { display:flex; flex-direction:column; }
+.bsg-ui .auth-form .error { margin:0; padding:12px 16px; border-radius:8px; background:var(--red-tint); color:var(--red-text); font-size:14px; }
+.bsg-ui .auth-switch { text-align:center; font-size:14px; color:var(--text-muted); }
+.bsg-ui .turnstile-widget { min-height:65px; }
+.bsg-ui .auth-form label.checkbox { flex-direction:row; align-items:center; }

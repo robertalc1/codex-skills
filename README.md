@@ -1,6 +1,6 @@
 # Codex Skills
 
-Colectia privata a lui Robert: **59 de skill-uri din 7 surse**, disponibile global in Codex CLI pe Windows. Fisierele si resursele sunt incluse in repository; nu trebuie reinstalat fiecare skill separat.
+Colectia lui Robert: **60 de skill-uri din 8 surse**, disponibile global in Codex CLI pe Windows. Fisierele si resursele sunt incluse in repository; nu trebuie reinstalat fiecare skill separat.
 
 | Colectie | Numar | Utilizare |
 |---|---:|---|
@@ -10,13 +10,14 @@ Colectia privata a lui Robert: **59 de skill-uri din 7 surse**, disponibile glob
 | Superpowers | 15 | Planificare, debugging, teste, review |
 | Remotion | 12 | Video cu React si fluxuri Remotion |
 | Site Clone | 4 | Analiza, reconstructie si personalizare site-uri |
+| BSGIS UI Design | 1 | Incadrari exacte, login, dashboard, controale si lumina de sus pe butoane |
 | Karpathy Guidelines | 1 | Clarificarea ipotezelor, cod simplu, modificari precise, verificare |
 
 [Catalog complet, surse, licente si versiuni](SOURCES.md)
 
 ## Instalare pe un calculator nou
 
-Ai nevoie de Git si de acces la acest repository privat. Codex CLI se instaleaza separat. Ruleaza in **CMD**, dintr-un folder unde doresti sa pastrezi colectia:
+Ai nevoie de Git si de acces la acest repository. Codex CLI se instaleaza separat. Ruleaza in **CMD**, dintr-un folder unde doresti sa pastrezi colectia:
 
 ```bat
 git clone https://github.com/robertalc1/codex-skills.git
@@ -37,6 +38,7 @@ Launcherul `.cmd` permite executarea scriptului PowerShell numai in procesul de 
 In Codex ruleaza `/skills` sau mentioneaza skill-ul cu `$`. Exemplu:
 
 ```text
+$bsgis-ui-design Aplica designul BSGIS complet, pastrand functionalitatea proiectului.
 $karpathy-guidelines Revizuieste codul si pastreaza modificarile simple si precise.
 $emil-design-eng Imbunatateste animatiile acestei interfete.
 $playwright-cli Verifica formularul din aplicatia mea locala.
@@ -63,10 +65,18 @@ Actualizeaza prin `git pull --ff-only`, apoi adauga legaturi pentru skill-urile 
 - Toate cele patru skill-uri Site Clone, necesare pentru referintele dintre ele.
 - Superpowers ca set de skill-uri; hook-urile si integrarea completa de plugin nu sunt instalate. Unele fluxuri depind de suportul multi-agent al sesiunii.
 - Nu sunt activate automat servicii MCP, conturi, telemetrie sau scripturi ale skill-urilor la instalare. Skill-urile pot solicita aceste instrumente cand sunt folosite.
-- Remotion nu include o licenta explicita in snapshot-ul acestui repository upstream; pastram nota din `sources/remotion/LICENSE-NOTE.md`, fara a atribui o licenta inventata. Colectia este privata.
+- Remotion nu include o licenta explicita in snapshot-ul acestui repository upstream; pastram nota din `sources/remotion/LICENSE-NOTE.md`, fara a atribui o licenta inventata.
 
 ## Versiuni si intretinere
 
 `sources.lock.json` fixeaza commit-urile upstream. `update.cmd` preia schimbarile din **acest repository**, nu cele mai noi versiuni de la autori. Actualizarea upstream se face separat, cu verificarea fisierelor, licentelor si catalogului. Nu adauga credentiale sau date de lucru.
 
 Fisierele copiate raman sub termenii autorilor lor; licentele si README-urile originale sunt pastrate in `sources/`.
+
+## Designul BSGIS reutilizabil
+
+[Skill si instructiuni](skills/bsgis-ui-design/SKILL.md) · [Specificatie exacta](skills/bsgis-ui-design/references/design-spec.md) · [Integrare](skills/bsgis-ui-design/references/integration.md)
+
+Include CSS local, exemple HTML pentru autentificare si dashboard, plus efectul de lumina la hover (200 ms). Ruleaza `update.cmd` intr-un checkout existent pentru a adauga noul skill. Exemplele se deschid local din `skills/bsgis-ui-design/assets/auth.html` si `dashboard.html`; nu autentifica utilizatori si nu salveaza date.
+
+Pe Linux/macOS poti copia folderul `skills/bsgis-ui-design` in `~/.agents/skills/`, pastrand toate resursele sale. Nu inlocui o instalare existenta personalizata fara sa compari fisierele.

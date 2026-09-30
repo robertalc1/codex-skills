@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BSGIS — componente și încadrare</title>
+  <link rel="stylesheet" href="bsgis-ui.css">
+</head>
+<body class="bsg-ui">
+  <div class="dashboard">
+    <header class="dashboard-header"><a href="auth.html" class="brand"><strong>Black Sea GIS</strong></a><span class="chip chip--info">Demonstrație</span><a href="auth.html" class="btn btn-outline">Autentificare</a></header>
+    <aside class="dashboard-sidebar"><nav aria-label="Navigație"><a href="dashboard.html" class="nav-item" aria-current="page">Prezentare generală</a><a href="#layers" class="nav-item">Straturi</a><a href="#buttons" class="nav-item">Butoane</a><a href="#states" class="nav-item">Stări și formulare</a></nav></aside>
+    <main class="dashboard-main">
+      <div class="page-heading"><div><h1>Prezentare generală</h1><p>Date fictive pentru verificarea designului.</p></div><button class="btn btn-primary" id="open-dialog" type="button">+ Adaugă un exemplu</button></div>
+      <div class="dashboard-grid">
+        <article class="card"><span>Straturi demonstrative</span><strong class="metric" id="layer-count">3</strong></article>
+        <article class="card"><span>Tipuri de geometrie</span><strong class="metric">3</strong></article>
+        <article class="card"><span>Sursa datelor</span><strong class="metric">Exemple</strong></article>
+      </div>
+      <section id="layers" aria-label="Straturi demonstrative">
+        <div class="toolbar"><label><span class="control-label">Caută un strat</span><input id="filter" type="search" placeholder="Numele stratului"></label><span class="chip chip--ok">Date de demonstrație</span></div>
+        <div class="data-table-wrap"><table class="data-table"><thead><tr><th scope="col">Nume</th><th scope="col">Geometrie</th><th scope="col">Stare</th><th scope="col" class="num">Obiecte</th></tr></thead><tbody id="layer-rows"><tr><td>Străzi — exemplu</td><td>Linie</td><td><span class="chip chip--ok">Disponibil</span></td><td class="num">24</td></tr><tr><td>Parcele — exemplu</td><td>Poligon</td><td><span class="chip chip--ok">Disponibil</span></td><td class="num">128</td></tr><tr><td>Adrese — exemplu</td><td>Punct</td><td><span class="chip chip--warn">De verificat</span></td><td class="num">86</td></tr></tbody></table></div>
+        <p id="filter-empty" class="demo-note" hidden>Niciun rezultat.</p>
+        <p id="row-status" class="demo-note" role="status"></p>
+      </section>
+      <section class="component-section" id="buttons"><h2>Butoane</h2><div class="button-samples"><button class="btn btn-primary" type="button" data-demo-action>Principal</button><button class="btn btn-outline" type="button" data-demo-action>Secundar</button><button class="btn btn-primary btn-sm" type="button" data-demo-action>Compact</button><button class="btn btn-danger" type="button" data-demo-action>Acțiune sensibilă</button><button class="btn btn-primary" type="button" disabled>Indisponibil</button></div><p class="demo-note" id="action-status" role="status">Treci cursorul peste un buton pentru lumina din partea de sus.</p></section>
+      <section class="component-section" id="states"><h2>Stări și formulare</h2><div class="button-samples"><span class="chip chip--ok">Finalizat</span><span class="chip chip--warn">Necesită verificare</span><span class="chip chip--danger">Eroare</span><span class="chip chip--info">În lucru</span></div><div class="empty-state" style="margin-top:24px"><strong class="empty-state-title">Un formular fără date reale</strong><p>Butonul de adăugare deschide un dialog și inserează un rând temporar. Nimic nu este salvat.</p></div></section>
+    </main>
+  </div>
+  <dialog id="example-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header"><h2 id="dialog-title">Adaugă un exemplu</h2><button class="btn btn-ghost btn-icon" type="button" id="close-dialog" aria-label="Închide">×</button></div>
+    <div class="dialog-body"><form id="example-form"><label>Numele stratului<input name="title" required maxlength="100" autofocus></label><p class="demo-note">Rând demonstrativ, păstrat doar până la reîncărcarea paginii.</p><div class="dialog-actions"><button class="btn btn-outline" type="button" id="cancel-dialog">Anulează</button><button class="btn btn-primary" type="submit">Adaugă</button></div></form></div>
+  </dialog>
+  <script src="demo.js"></script>
+</body>
+</html>

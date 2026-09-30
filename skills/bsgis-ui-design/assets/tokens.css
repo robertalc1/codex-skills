@@ -1,0 +1,99 @@
+/* Scoped BSGIS design reference. No application behavior is included. */
+.bsg-ui {
+
+  --surface: #ffffff;
+  --surface-alt: #f8f9fa;
+  --surface-sunken: #f1f3f4;
+  --surface-blue: #e8f0fe;
+
+  --text: #202124;
+  --text-heading: #3c4043;
+  --text-muted: #5f6368;
+  --text-faint: #80868b;
+  --text-on-accent: #ffffff;
+
+  --line: #dadce0;
+  --line-soft: #e8eaed;
+
+  --blue: #1a73e8;
+  --blue-hover: #1b66c9;
+  --blue-press: #185abc;
+  --blue-tint: #e8f0fe;
+  --blue-text: #185abc;
+
+  --green: #1e8e3e;
+  --green-text: #137333;
+  --green-tint: #e6f4ea;
+  --red: #d93025;
+  --red-hover: #b3261e;
+  --red-text: #c5221f;
+  --red-tint: #fce8e6;
+  --yellow: #f9ab00;
+  --yellow-text: #7a5000;
+  --yellow-tint: #fef7e0;
+
+  --font: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-display: clamp(36px, 24px + 2.3vw, 56px);
+  --fs-h1: clamp(32px, 22.4px + 2.4vw, 48px);
+  --fs-h2: clamp(24px, 19.2px + 1.2vw, 36px);
+  --fs-h3: 22px;
+  --fs-h4: 18px;
+  --fs-lead: 18px;
+  --fs-body: 14px;
+  --fs-sm: 14px;
+  --fs-xs: 12px;
+  --fs-eyebrow: 11px;
+
+  --fw-regular: 400;
+  --fw-medium: 600;
+
+  --lh-display: 1.05;
+  --lh-heading: 1.25;
+  --lh-body: 1.5;
+  --lh-dense: 1.4;
+
+  --ls-display: -0.03125em;
+  --ls-heading: -0.0125em;
+  --ls-body: 0;
+  --ls-button: 0;
+  --ls-eyebrow: 0.0455em;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 40px;
+  --sp-8: 48px;
+  --sp-9: 64px;
+  --sp-10: 80px;
+  --sp-12: 120px;
+
+  --r-card: 8px;
+  --r-md: 8px;
+  --r-sm: 8px;
+  --r-xs: 8px;
+  --r-pill: 999px;
+
+  --elev-1: 0 1px 2px rgb(32 33 36 / 6%);
+  --elev-2: 0 2px 3px rgba(60, 64, 67, 0.3), 0 6px 10px 4px rgba(60, 64, 67, 0.15);
+  --elev-3: 0 4px 4px rgba(60, 64, 67, 0.3), 0 8px 12px 6px rgba(60, 64, 67, 0.15);
+
+  --dur-fast: 0.1s;
+  --dur: 0.2s;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.05, 0.7, 0.1, 1);
+
+  --ctl-h: 38px;
+  --ctl-h-md: 38px;
+  --ctl-h-sm: 32px;
+  --ctl-px: 12px;
+  --ctl-px-sm: 12px;
+
+  --focus-ring: 0 0 0 2px #ffffff, 0 0 0 4px var(--blue);
+
+  --wrap: 1280px;
+  --measure: 60ch;
+}
