@@ -1,6 +1,6 @@
 # Codex Skills
 
-Colectia lui Robert: **60 de skill-uri din 8 surse**, disponibile global in Codex CLI pe Windows. Fisierele si resursele sunt incluse in repository; nu trebuie reinstalat fiecare skill separat.
+Colectia lui Robert: **159 de skill-uri din 13 surse**, disponibile global in Codex CLI pe Windows. Fisierele si resursele sunt incluse in repository; nu trebuie reinstalat fiecare skill separat.
 
 | Colectie | Numar | Utilizare |
 |---|---:|---|
@@ -12,6 +12,11 @@ Colectia lui Robert: **60 de skill-uri din 8 surse**, disponibile global in Code
 | Site Clone | 4 | Analiza, reconstructie si personalizare site-uri |
 | BSGIS UI Design | 1 | Incadrari exacte, login, dashboard, controale si lumina de sus pe butoane |
 | Karpathy Guidelines | 1 | Clarificarea ipotezelor, cod simplu, modificari precise, verificare |
+| REA | 1 | Reverse engineering cu reverse-engineer-anything |
+| MarketingSkills | 50 | Marketing, SEO, continut, campanii, conversie |
+| ECC | 46 | Setul Codex: dezvoltare, research, verificare si continut |
+| I Have ADHD | 1 | Formatarea raspunsurilor, activata explicit |
+| MarkItDown | 1 | Adaptor pentru conversia documentelor in Markdown |
 
 [Catalog complet, surse, licente si versiuni](SOURCES.md)
 
@@ -31,7 +36,13 @@ In PowerShell, foloseste `./setup.cmd` si `./install-tools.cmd`. Autentifica-te 
 
 `setup.cmd` creeaza legaturi de tip junction in `%USERPROFILE%\.agents\skills`, cate una pentru fiecare skill. Nu necesita administrator. Verifica intai toate destinatiile si se opreste la conflicte; nu suprascrie skill-uri existente. Poate fi rulat de mai multe ori. **Pastreaza checkout-ul in acelasi loc**: legaturile trimit catre el.
 
-Launcherul `.cmd` permite executarea scriptului PowerShell numai in procesul de instalare; nu schimba permanent Execution Policy. `install-tools.cmd` instaleaza separat versiunea fixata `@playwright/cli@0.1.21` si necesita Node.js LTS si acces la npm. Browserul si celelalte dependinte specifice proiectului se configureaza la utilizare.
+Launcherul `.cmd` permite executarea scriptului PowerShell numai in procesul de instalare; nu schimba permanent Execution Policy. `install-tools.cmd` instaleaza versiunile fixate `@playwright/cli@0.1.22` si `rea-agents@6.5.0`, plus MarkItDown cu toate dependintele optionale, din commit-ul fixat in manifest. Necesita Node.js LTS, Git si Python 3.10-3.14 sau uv. MarkItDown foloseste un mediu izolat in `%USERPROFILE%\.local\share\codex-skills\markitdown-venv`; nu modifica pachetele Python globale. Browserul si motoarele native REA se configureaza la utilizare.
+
+Daca exista skill-uri locale cu aceleasi nume si vrei sa le inlocuiesti cu versiunile colectiei, ruleaza `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1 -BackupExisting`. Pastreaza versiunile precedente in `%USERPROFILE%\.local\share\codex-skill-backups`, apoi creeaza junction-urile. Rularea obisnuita continua sa refuze conflictele.
+
+ECC include cele 46 de skill-uri adaptate pentru Codex din `.agents/skills`, fara instalarea hook-urilor sau a regulilor globale ale pluginului. REA include skill-ul principal; CLI-ul este instalat separat, iar inregistrarea MCP se face cand este necesara. MarkItDown nu publica un skill oficial: adaptorul din colectie foloseste biblioteca Microsoft. Instalarea ADHD nu activeaza modul; invoca `$i-have-adhd` cand il doresti.
+
+Pentru actualizarea snapshot-urilor upstream, descarca checkout-uri curate ale surselor in directoare cu ID-urile din manifest si ruleaza `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\import-upstreams.ps1 -UpstreamRoot C:\cale\skill-upstreams`. Scriptul verifica toate intrarile, pastreaza snapshot-urile precedente, actualizeaza manifestul si regenereaza catalogul. Revizuieste diferentele inainte de commit.
 
 ## Folosire
 

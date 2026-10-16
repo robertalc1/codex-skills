@@ -1,23 +1,26 @@
-# Surse si versiuni
+﻿# Surse si versiuni
 
-Copii integrale ale directoarelor de skill-uri, fara executarea scripturilor upstream la import. Versiunile sunt fixate in `sources.lock.json`.
+Snapshot-uri complete de skill-uri, fixate in `sources.lock.json`. Licentele originale sunt in `sources/`.
 
 | Sursa | Skill-uri | Licenta | Commit |
 |---|---:|---|---|
-| [taste](https://github.com/Leonxlnx/taste-skill) | 13 | MIT | [ce26fc25c0e5](https://github.com/Leonxlnx/taste-skill/commit/ce26fc25c0e5e8cab638f883de62d9a86ee5e45b) |
-| [emil](https://github.com/emilkowalski/skills) | 13 | MIT | [d16ebe60d09a](https://github.com/emilkowalski/skills/commit/d16ebe60d09a5ba2afcb7054ede9d0a10c9f6128) |
-| [superpowers](https://github.com/obra/superpowers) | 15 | MIT | [8ca22dba9a94](https://github.com/obra/superpowers/commit/8ca22dba9a94f28898bbce59f2537ff4d87c747d) |
-| [remotion](https://github.com/remotion-dev/skills) | 12 | Not specified in this repository | [cf49eff5d446](https://github.com/remotion-dev/skills/commit/cf49eff5d4463b33966b6618c83f7295797dd028) |
-| [site-clone](https://github.com/cth9191/site-clone) | 4 | MIT | [f01d396b64af](https://github.com/cth9191/site-clone/commit/f01d396b64afa07870c6fc6757a35b92993791e2) |
-| [playwright](https://github.com/microsoft/playwright-cli) | 1 | Apache-2.0 | [74354ecc7a43](https://github.com/microsoft/playwright-cli/commit/74354ecc7a43da16d91a9bc54fa8db8283a3fcf5) |
+| [taste](https://github.com/Leonxlnx/taste-skill) | 13 | MIT | f624f37a8c650b9cc550253104925efe4c8de246 |
+| [emil](https://github.com/emilkowalski/skills) | 13 | MIT | 2d228630ba1446365f614a108cb8252f1feda202 |
+| [superpowers](https://github.com/obra/superpowers) | 15 | MIT | bb92a77741419a4ab5f06e711a283343f1ada0c3 |
+| [remotion](https://github.com/remotion-dev/skills) | 12 | Not specified in this repository | 1441a11e95db35443bd76bb318386c0d3ca00053 |
+| [site-clone](https://github.com/cth9191/site-clone) | 4 | MIT | f01d396b64afa07870c6fc6757a35b92993791e2 |
+| [playwright](https://github.com/microsoft/playwright-cli) | 1 | Apache-2.0 | b85c7a736bb473bf55b584e54a09ffa698d6d871 |
+| [karpathy](https://github.com/multica-ai/andrej-karpathy-skills) | 1 | MIT (declared in SKILL.md and upstream README) | 2c606141936f1eeef17fa3043a72095b4765b9c2 |
+| [bsgis-design](https://github.com/robertalc1/codex-skills) | 1 | No separate license declared | first-party |
+| [rea](https://github.com/morluto/rea) | 1 | MIT | 60bf1024592888b5efb78f9c9458b4633da298bd |
+| [marketing](https://github.com/coreyhaines31/marketingskills) | 50 | MIT | 365b412152b9542499ca1439426f7fc3cc92bb65 |
+| [ecc](https://github.com/affaan-m/ecc) | 46 | MIT | 76aaa77df6adc5b889e689007bf99b9a4f74af34 |
+| [adhd](https://github.com/ayghri/i-have-adhd) | 1 | MIT | 1ecea1993b7fce257ffbd686c070948b5e07eda6 |
+| [markitdown](https://github.com/microsoft/markitdown) | 1 | MIT | 4cc9fa17653d695d64fb9eee5b33d4de55ff84e8 |
 
-| [karpathy](https://github.com/multica-ai/andrej-karpathy-skills) | 1 | MIT (declarata in SKILL.md si README) | [2c606141936f](https://github.com/multica-ai/andrej-karpathy-skills/commit/2c606141936f1eeef17fa3043a72095b4765b9c2) |
-
-Licentele si README-urile originale sunt in `sources/`. Licentele upstream guverneaza fisierele copiate; colectia nu le relicentiaza.
-
-## Sursa proprie: BSGIS UI Design
-
-`bsgis-design` este skill-ul propriu din [skills/bsgis-ui-design](skills/bsgis-ui-design/SKILL.md), creat din designul BSGIS final. Este versionat direct in acest repository, fara commit upstream separat. Include reguli, CSS izolat si exemple sintetice offline. Nu include cod Cloudflare extras, backend, credentiale sau date cadastrale. Nu se declara o licenta separata prin aceasta adaugare.
+ECC: setul Codex din `.agents/skills`; hook-urile, regulile globale, MCP-urile si celelalte integrari nu sunt activate la import.
+REA: skill-ul principal reverse-engineer-anything; skill-urile de mentenanta ale proiectului REA nu sunt globale.
+MarkItDown: biblioteca upstream si adaptor local; upstream nu publica SKILL.md.
 
 ## Catalog
 
@@ -80,4 +83,103 @@ Licentele si README-urile originale sunt in `sources/`. Licentele upstream guver
 - [shader-extract](skills/shader-extract/SKILL.md) (site-clone)
 - [playwright-cli](skills/playwright-cli/SKILL.md) (playwright)
 - [karpathy-guidelines](skills/karpathy-guidelines/SKILL.md) (karpathy)
-- [bsgis-ui-design](skills/bsgis-ui-design/SKILL.md) (bsgis-design, sursa proprie)
+- [bsgis-ui-design](skills/bsgis-ui-design/SKILL.md) (bsgis-design)
+- [reverse-engineer-anything](skills/reverse-engineer-anything/SKILL.md) (rea)
+- [i-have-adhd](skills/i-have-adhd/SKILL.md) (adhd)
+- [markitdown](skills/markitdown/SKILL.md) (markitdown)
+- [ab-testing](skills/ab-testing/SKILL.md) (marketing)
+- [ad-creative](skills/ad-creative/SKILL.md) (marketing)
+- [ads](skills/ads/SKILL.md) (marketing)
+- [ai-seo](skills/ai-seo/SKILL.md) (marketing)
+- [analytics](skills/analytics/SKILL.md) (marketing)
+- [aso](skills/aso/SKILL.md) (marketing)
+- [attribution](skills/attribution/SKILL.md) (marketing)
+- [churn-prevention](skills/churn-prevention/SKILL.md) (marketing)
+- [cold-email](skills/cold-email/SKILL.md) (marketing)
+- [co-marketing](skills/co-marketing/SKILL.md) (marketing)
+- [community-marketing](skills/community-marketing/SKILL.md) (marketing)
+- [competitor-profiling](skills/competitor-profiling/SKILL.md) (marketing)
+- [competitors](skills/competitors/SKILL.md) (marketing)
+- [content-strategy](skills/content-strategy/SKILL.md) (marketing)
+- [copy-editing](skills/copy-editing/SKILL.md) (marketing)
+- [copywriting](skills/copywriting/SKILL.md) (marketing)
+- [cro](skills/cro/SKILL.md) (marketing)
+- [customer-research](skills/customer-research/SKILL.md) (marketing)
+- [directory-submissions](skills/directory-submissions/SKILL.md) (marketing)
+- [emails](skills/emails/SKILL.md) (marketing)
+- [events](skills/events/SKILL.md) (marketing)
+- [free-tools](skills/free-tools/SKILL.md) (marketing)
+- [image](skills/image/SKILL.md) (marketing)
+- [influencer-marketing](skills/influencer-marketing/SKILL.md) (marketing)
+- [launch](skills/launch/SKILL.md) (marketing)
+- [lead-magnets](skills/lead-magnets/SKILL.md) (marketing)
+- [marketing-council](skills/marketing-council/SKILL.md) (marketing)
+- [marketing-ideas](skills/marketing-ideas/SKILL.md) (marketing)
+- [marketing-loops](skills/marketing-loops/SKILL.md) (marketing)
+- [marketing-plan](skills/marketing-plan/SKILL.md) (marketing)
+- [marketing-psychology](skills/marketing-psychology/SKILL.md) (marketing)
+- [offers](skills/offers/SKILL.md) (marketing)
+- [onboarding](skills/onboarding/SKILL.md) (marketing)
+- [paywalls](skills/paywalls/SKILL.md) (marketing)
+- [popups](skills/popups/SKILL.md) (marketing)
+- [pricing](skills/pricing/SKILL.md) (marketing)
+- [product-marketing](skills/product-marketing/SKILL.md) (marketing)
+- [programmatic-seo](skills/programmatic-seo/SKILL.md) (marketing)
+- [prospecting](skills/prospecting/SKILL.md) (marketing)
+- [public-relations](skills/public-relations/SKILL.md) (marketing)
+- [referrals](skills/referrals/SKILL.md) (marketing)
+- [revops](skills/revops/SKILL.md) (marketing)
+- [sales-enablement](skills/sales-enablement/SKILL.md) (marketing)
+- [schema](skills/schema/SKILL.md) (marketing)
+- [seo-audit](skills/seo-audit/SKILL.md) (marketing)
+- [signup](skills/signup/SKILL.md) (marketing)
+- [site-architecture](skills/site-architecture/SKILL.md) (marketing)
+- [sms](skills/sms/SKILL.md) (marketing)
+- [social](skills/social/SKILL.md) (marketing)
+- [video](skills/video/SKILL.md) (marketing)
+- [agent-introspection-debugging](skills/agent-introspection-debugging/SKILL.md) (ecc)
+- [agent-sort](skills/agent-sort/SKILL.md) (ecc)
+- [api-design](skills/api-design/SKILL.md) (ecc)
+- [article-writing](skills/article-writing/SKILL.md) (ecc)
+- [backend-patterns](skills/backend-patterns/SKILL.md) (ecc)
+- [benchmark-methodology](skills/benchmark-methodology/SKILL.md) (ecc)
+- [brand-discovery](skills/brand-discovery/SKILL.md) (ecc)
+- [brand-voice](skills/brand-voice/SKILL.md) (ecc)
+- [bun-runtime](skills/bun-runtime/SKILL.md) (ecc)
+- [change-impact](skills/change-impact/SKILL.md) (ecc)
+- [coding-standards](skills/coding-standards/SKILL.md) (ecc)
+- [competitive-platform-analysis](skills/competitive-platform-analysis/SKILL.md) (ecc)
+- [competitive-report-structure](skills/competitive-report-structure/SKILL.md) (ecc)
+- [content-engine](skills/content-engine/SKILL.md) (ecc)
+- [context-and-decisions](skills/context-and-decisions/SKILL.md) (ecc)
+- [crosspost](skills/crosspost/SKILL.md) (ecc)
+- [deep-research](skills/deep-research/SKILL.md) (ecc)
+- [dmux-workflows](skills/dmux-workflows/SKILL.md) (ecc)
+- [docs-governance](skills/docs-governance/SKILL.md) (ecc)
+- [documentation-lookup](skills/documentation-lookup/SKILL.md) (ecc)
+- [e2e-testing](skills/e2e-testing/SKILL.md) (ecc)
+- [ecc-conventions](skills/ecc-conventions/SKILL.md) (ecc)
+- [eval-harness](skills/eval-harness/SKILL.md) (ecc)
+- [exa-search](skills/exa-search/SKILL.md) (ecc)
+- [fal-ai-media](skills/fal-ai-media/SKILL.md) (ecc)
+- [frontend-patterns](skills/frontend-patterns/SKILL.md) (ecc)
+- [frontend-slides](skills/frontend-slides/SKILL.md) (ecc)
+- [investor-materials](skills/investor-materials/SKILL.md) (ecc)
+- [investor-outreach](skills/investor-outreach/SKILL.md) (ecc)
+- [market-research](skills/market-research/SKILL.md) (ecc)
+- [mcp-dependency-review](skills/mcp-dependency-review/SKILL.md) (ecc)
+- [mcp-server-patterns](skills/mcp-server-patterns/SKILL.md) (ecc)
+- [mle-workflow](skills/mle-workflow/SKILL.md) (ecc)
+- [module-regression](skills/module-regression/SKILL.md) (ecc)
+- [nextjs-turbopack](skills/nextjs-turbopack/SKILL.md) (ecc)
+- [plan-canvas](skills/plan-canvas/SKILL.md) (ecc)
+- [product-capability](skills/product-capability/SKILL.md) (ecc)
+- [security-review](skills/security-review/SKILL.md) (ecc)
+- [skill-host-compat](skills/skill-host-compat/SKILL.md) (ecc)
+- [strategic-compact](skills/strategic-compact/SKILL.md) (ecc)
+- [tdd-workflow](skills/tdd-workflow/SKILL.md) (ecc)
+- [test-collaboration](skills/test-collaboration/SKILL.md) (ecc)
+- [unified-memory](skills/unified-memory/SKILL.md) (ecc)
+- [verification-loop](skills/verification-loop/SKILL.md) (ecc)
+- [video-editing](skills/video-editing/SKILL.md) (ecc)
+- [x-api](skills/x-api/SKILL.md) (ecc)
